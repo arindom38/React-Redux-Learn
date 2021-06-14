@@ -15,11 +15,16 @@
     <div id="app"></div>
     <script type="text/babel">
         class App extends React.Component { //app component is added
+            //state is a java script obeject, it describe the current state of the object
+            state = {
+                name: 'Arindom',
+                age: 26
+            }
             render () { //render the component
                 return ( //must return only one root element here div is retuened 
                     <div className="app-content">
                         <h1>Welcome to React</h1>
-                        <p>{ Math.random()*100 }</p>
+                        <p>My Name is: {this.state.name} and I am {this.state.age}</p>
                     </div>
                     //<h2></h2> adding this element will cause error , cause must return only one element
                 )
