@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- React Library -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script> 
+    <!-- React Dom Library -->
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel used for transforming JSX code for browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        class App extends React.Component { //app component is added
+            render () { //render the component
+                return ( //must return only one root element here div is retuened 
+                    <div className="app-content">
+                        <h1>Welcome to React</h1>
+                        <p>{ Math.random()*100 }</p>
+                    </div>
+                    //<h2></h2> adding this element will cause error , cause must return only one element
+                )
+            }
+        }
+        // Need to add this compopnet to DOM ,here works the react-dom as  glue
+        ReactDOM.render(<App/>,document.getElementById("app"));
+    </script>
+</body>
+</html>
