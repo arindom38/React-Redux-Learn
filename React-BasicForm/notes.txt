@@ -1,0 +1,8 @@
+For all the Dom Event list:
+https://www.w3schools.com/jsref/dom_obj_event.asp
+
+React handling events Reference:
+https://reactjs.org/docs/handling-events.html
+
+More on this keyowrd :
+https://www.freecodecamp.org/news/this-is-why-we-need-to-bind-event-handlers-in-class-components-in-react-f7ea1a6f93eb/

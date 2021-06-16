@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- React Library -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script> 
+    <!-- React Dom Library -->
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel used for transforming JSX code for browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        class App extends React.Component { //app component is added
+            //state is a java script obeject, it describe the current state of the object
+            state = {
+                name: 'Arindom',
+                age: 26
+            }
+            //all the event fucntion
+            handleChange = (e) => {
+                this.setState({
+                    name: e.target.value
+                });
+            };
+            handleSubmit = (e) => {
+                e.preventDefault();
+                console.log('Form Submitted',this.state.name);
+            }
+            render () { //render the component
+                return ( //must return only one root element here div is retuened 
+                    <div className="app-content">
+                        <h1>Welcome to {this.state.name}</h1>
+                        <form onSubmit= {this.handleSubmit}>
+                            <input type="text" onChange={this.handleChange}/>
+                            <button>Submit</button>    
+                        </form>
+                    </div>
+                )
+            }
+        }
+        // Need to add this compopnet to DOM ,here works the react-dom as  glue
+        ReactDOM.render(<App/>,document.getElementById("app"));
+    </script>
+</body>
+</html>
