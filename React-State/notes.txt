@@ -1,0 +1,5 @@
+For all the Dom Event list:
+https://www.w3schools.com/jsref/dom_obj_event.asp
+
+React handling events Reference:
+https://reactjs.org/docs/handling-events.html

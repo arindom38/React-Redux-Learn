@@ -20,13 +20,25 @@
                 name: 'Arindom',
                 age: 26
             }
+            //all the event fucntion
+            handleClcik(e){
+                console.log(e.target);
+            }
+            handleMouseOver(e){
+                console.log(e.target,e.pageX);
+            }
+            handleCopy(e){
+                console.log('Try beign original at least once!');
+            }
             render () { //render the component
                 return ( //must return only one root element here div is retuened 
                     <div className="app-content">
                         <h1>Welcome to React</h1>
                         <p>My Name is: {this.state.name} and I am {this.state.age}</p>
+                        <button onClick= {this.handleClcik}>Clcik Me</button>
+                        <button onMouseOver= {this.handleMouseOver}>Hover Me</button>
+                        <p onCopy ={this.handleCopy}>This is should not be copied</p>
                     </div>
-                    //<h2></h2> adding this element will cause error , cause must return only one element
                 )
             }
         }
